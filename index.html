@@ -21,7 +21,9 @@
       setInterval(loop, 30000);
     }
   function loop() {
-    location.reload()
+    location.reload().then(() => {
+    console.log("reloaded.")
+  });
   }
     </script>
   </body>
