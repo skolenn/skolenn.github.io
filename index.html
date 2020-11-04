@@ -8,21 +8,9 @@
       </h1>
     </center>
     <script>
-          if (document.addEventListener) {
-      document.addEventListener("DOMContentLoaded", function () {
-        loaded();
-      });
-    } else if (document.attachEvent) {
-      document.attachEvent("onreadystatechange", function () {
-        loaded();
-      });
-    }
-    function loaded() {
-      setInterval(loop, 3000);
-    }
-  function loop() {
-    location.reload()
-  }
+      setInterval(() => {
+      location.reload()
+  }, 300)
     </script>
   </body>
 </html>
