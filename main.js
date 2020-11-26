@@ -1,5 +1,3 @@
-let markdown = '`';
-
 function popup(text) {
 	let p = document.createElement('div');
 	p.className = 'popup';
@@ -26,9 +24,16 @@ function send() {
 	request.setRequestHeader('Content-type', 'application/json');
 
 	let params = {
-		username: 'skolenn.github.io',
+		username: 'Peitho messenger',
 		avatar_url: '',
-		content: `${markdown}${text}${markdown} from ${markdown}${name}${markdown}`,
+		embeds: [
+			{
+				title: 'Recieved a message!',
+				description: '```${text}```',
+				author: `${name}`,
+				timestap: new Date.Now(),
+			},
+		],
 	};
 	if (text == undefined) {
 		return popup("You can't send an empty string");
