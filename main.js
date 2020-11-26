@@ -16,7 +16,7 @@
 
       function send() {
       let request = new XMLHttpRequest();
-      let text = document.getElementById("input")
+      let text = document.getElementById("input").value
       request.open("POST", "https://some-retarded-api.glitch.me");
 
       request.setRequestHeader('Content-type', 'application/json');
