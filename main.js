@@ -28,9 +28,12 @@ function send() {
 		username: 'Peitho messenger',
 		embeds: [
 			{
-				"title": 'Recieved a message!',
-				"description": `\`\`${text}\`\``,
-				"footer": `${name}`,
+				title: 'Recieved a message!',
+				description: `\`\`${text}\`\``,
+				footer: {
+					text: `${name}`,
+					icon_url: 'https://doggo.ninja/TsY1SP.jpg',
+				},
 			},
 		],
 	};
