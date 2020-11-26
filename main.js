@@ -26,7 +26,7 @@ function send() {
 	const params = {
 		avatar_url: 'https://doggo.ninja/TsY1SP.jpg',
 		username: 'Peitho messenger',
-		embeds: [
+		embeds: [ //lmfao thank you pxseu for helping me figuring out the author part ( im dumm )
 			{
 				title: 'Recieved a message!',
 				description: `\`\`${text}\`\``,
