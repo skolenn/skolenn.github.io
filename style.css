@@ -67,3 +67,23 @@
         button:focus {
         outline: none;
         }
+
+        .popup {
+            padding: 24px;
+            z-index: 2;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff4242;
+            box-shadow: #ff424280 0px 0px 10px;
+        }
+
+        .popup-accept {
+            margin-top: 8px;
+            cursor: pointer;
+            padding: 8px 14px;
+            display: inline-block;
+            background-color: white;
+            color: black;
+        }
