@@ -1,4 +1,61 @@
-button {
-  width: 150px;
-  height: 30px;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+        * {
+            font-family: 'Manrope', sans-serif;
+            color: white;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #272727;
+        }
+
+        #content {
+            background-color: #1e1e1e;
+            width: 300px;
+            height: 200px;
+            padding: 12px;
+        }
+
+        .input {
+            display: flex;
+            margin-bottom: 2px;
+        }
+
+        .input input {
+            background-color: #272727;
+            border: none;
+            margin-left: 12px;
+            flex: 1;
+            font-size: 12px;
+        }
+
+        .button {
+            padding: 8px;
+            background-color: #3fdf3f;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: 276px;
+            height: 40px;
+        }
+
+        .noselect {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
