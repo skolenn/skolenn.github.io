@@ -1,8 +1,3 @@
-      async functon getip() {
-            await fetch('http://icanhazip.com/')
-            console.log(res)
-      }
-
       var request = new XMLHttpRequest();
       request.open("POST", "https://some-retarded-api.glitch.me");
 
