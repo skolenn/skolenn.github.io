@@ -7,9 +7,25 @@
     <center>
       <h1>
         <p>im bored asf lmfao</p>
-        <div>
-      
+    <div id='content' class="center">
+        <h1 class="noselect">Webhook</h1>
+
+        <div class='input noselect'>
+          <a>Send me a message</a>
+            <input type='input' id="webhook">
         </div>
+        <div class='input noselect'>
+            <a>Alias</a>
+            <input type='input' id="username">
+        </div>
+        <div class='input noselect'>
+            <a>Message</a>
+            <input type='input' id="message">
+        </div>
+        <button onclick="sendMessage()" class='button noselect'>
+            Send
+        </button>
+    </div>
       </h1>
     </center>
     <script src="/main.js"></script>
