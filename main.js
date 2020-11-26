@@ -1,6 +1,5 @@
             let markdown = "`"
-            let text = document.getElementById("input").value
-            let name = document.getElementById("name").value
+
             function popup(text) {
             let p = document.createElement("div");
             p.className = "popup";
@@ -21,7 +20,8 @@
       function send() {
       let request = new XMLHttpRequest();
       request.open("POST", "https://peitho-messenger.glitch.me");
-
+      let text = document.getElementById("input").value
+      let name = document.getElementById("name").value
       request.setRequestHeader('Content-type', 'application/json');
 
       let params = {
