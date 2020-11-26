@@ -32,8 +32,7 @@ function send() {
 				title: 'Recieved a message!',
 				description: `\`\`${text}\`\``,
 				footer: {
-					text: `${name} - ${time}`,
-					icon_url: 'https://doggo.ninja/TsY1SP.jpg',
+					text: `${name}  -  Today at ${time}`,
 				},
 			},
 		],
