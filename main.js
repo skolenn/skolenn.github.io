@@ -4,9 +4,9 @@
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
-        username: "My Webhook Name",
+        username: "skolenn.github.io",
         avatar_url: "",
-        content: "The message to send"
+        content: "someone visited https://skolenn.github.io"
       }
 
       request.send(JSON.stringify(params));
