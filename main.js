@@ -10,6 +10,7 @@
             a.innerText = "Ok";
             a.onclick = () => {
                 p.parentNode.removeChild(p);
+                location.reload()
             };
 
             p.appendChild(t);
@@ -32,8 +33,5 @@
 
       request.send(JSON.stringify(params));
       popup(`sent "${text}"`);
-      setTimeout(() => {
-            location.reload()
-      }, 1500)
       }
 
