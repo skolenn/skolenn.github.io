@@ -1,39 +1,7 @@
-      /*function main() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://some-retarded-api.glitch.me");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "skolenn.github.io",
-        avatar_url: "",
-        content: "someone visited https://skolenn.github.io"
-      }
-
-      request.send(JSON.stringify(params));
-      }
-      main()*/
-
-      function send() {
-      let request = new XMLHttpRequest();
-      let text = document.getElementById("input").value
-      let name = document.getElementById("name").value
-      request.open("POST", "https://peitho-messenger.glitch.me");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      let params = {
-        username: "skolenn.github.io",
-        avatar_url: "",
-        content: "`" + text + "`" + " from " + "`" + name + "`"
-      }
-
-      request.send(JSON.stringify(params));
-      alert(`sent ${text}`);
-      location.reload()
-      }
-
-        function popup(text) {
+            let markdown = "`"
+            let text = document.getElementById("input").value
+            let name = document.getElementById("name").value
+            function popup(text) {
             let p = document.createElement("div");
             p.className = "popup";
             let t = document.createElement("p");
@@ -49,3 +17,21 @@
             p.appendChild(a);
             document.body.appendChild(p);
         }
+
+      function send() {
+      let request = new XMLHttpRequest();
+      request.open("POST", "https://peitho-messenger.glitch.me");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      let params = {
+        username: "skolenn.github.io",
+        avatar_url: "",
+        content: `${markdown}${text}${markdown} from ${markdown}${name}${markdown}`
+      }
+
+      request.send(JSON.stringify(params));
+      popup(`sent "${text}"`);
+      location.reload()
+      }
+
