@@ -31,7 +31,6 @@ function send() {
 				title: 'Recieved a message!',
 				description: '```${text}```',
 				author: `${name}`,
-				timestap: new Date.Now(),
 			},
 		],
 	};
