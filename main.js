@@ -17,20 +17,22 @@ function popup(text) {
 }
 
 function send() {
-	let request = new XMLHttpRequest();
+	const request = new XMLHttpRequest();
 	request.open('POST', 'https://peitho-messenger.glitch.me');
 	let text = document.getElementById('input').value;
 	let name = document.getElementById('name').value;
 	request.setRequestHeader('Content-type', 'application/json');
 
-	let params = {
+	const params = {
+		avatar_url: 'https://doggo.ninja/TsY1SP.jpg',
 		username: 'Peitho messenger',
-		avatar_url: '',
 		embeds: [
 			{
 				title: 'Recieved a message!',
-				description: '```${text}```',
-				author: `${name}`,
+				description: `\`\`${text}\`\``,
+				author: {
+					name: `${name}`,
+				},
 			},
 		],
 	};
