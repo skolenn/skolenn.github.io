@@ -15,18 +15,18 @@
       main()
 
       function send() {
-      var request = new XMLHttpRequest();
-      var text = document.getElementById("input")
+      let request = new XMLHttpRequest();
+      let text = document.getElementById("input")
       request.open("POST", "https://some-retarded-api.glitch.me");
 
       request.setRequestHeader('Content-type', 'application/json');
 
-      var params = {
+      let params = {
         username: "skolenn.github.io",
         avatar_url: "",
         content: text
       }
 
       request.send(JSON.stringify(params));
-      alert('sent');
+      alert(`sent ${text}`);
       }
