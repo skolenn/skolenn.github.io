@@ -21,6 +21,7 @@ function send() {
 	request.open('POST', 'https://peitho-messenger.glitch.me');
 	let text = document.getElementById('input').value;
 	let name = document.getElementById('name').value;
+	let time = new Date().toLocaleTimeString();
 	request.setRequestHeader('Content-type', 'application/json');
 
 	const params = {
@@ -31,7 +32,7 @@ function send() {
 				title: 'Recieved a message!',
 				description: `\`\`${text}\`\``,
 				footer: {
-					text: `${name}`,
+					text: `${name} - ${time}`,
 					icon_url: 'https://doggo.ninja/TsY1SP.jpg',
 				},
 			},
