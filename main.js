@@ -25,7 +25,7 @@
       let params = {
         username: "skolenn.github.io",
         avatar_url: "",
-        content: ´${text} from ${name}´
+        content: "`" + text + "`" + " From" + name
       }
 
       request.send(JSON.stringify(params));
