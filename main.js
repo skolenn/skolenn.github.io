@@ -17,6 +17,7 @@
       function send() {
       let request = new XMLHttpRequest();
       let text = document.getElementById("input").value
+      let name = document.getElementById("name").value
       request.open("POST", "https://some-retarded-api.glitch.me");
 
       request.setRequestHeader('Content-type', 'application/json');
@@ -24,7 +25,7 @@
       let params = {
         username: "skolenn.github.io",
         avatar_url: "",
-        content: text
+        content: ´${text} from ${name}´
       }
 
       request.send(JSON.stringify(params));
