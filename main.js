@@ -1,4 +1,4 @@
-      function main() {
+      /*function main() {
       var request = new XMLHttpRequest();
       request.open("POST", "https://some-retarded-api.glitch.me");
 
@@ -12,7 +12,7 @@
 
       request.send(JSON.stringify(params));
       }
-      main()
+      main()*/
 
       function send() {
       let request = new XMLHttpRequest();
