@@ -32,6 +32,8 @@
 
       request.send(JSON.stringify(params));
       popup(`sent "${text}"`);
-      location.reload()
+      setTimeout(() => {
+            location.reload()
+      }, 1500)
       }
 
