@@ -29,4 +29,5 @@
 
       request.send(JSON.stringify(params));
       alert(`sent ${text}`);
+      location.reload()
       }
