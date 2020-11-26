@@ -28,5 +28,5 @@
       }
 
       request.send(JSON.stringify(params));
-            alert('sent')
+      alert('sent');
       }
