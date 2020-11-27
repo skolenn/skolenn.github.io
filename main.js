@@ -6,8 +6,8 @@ function popup(text) {
 	let a = document.createElement('a');
 	a.className = 'popup-accept';
 	a.innerText = 'Ok';
-	document.getElementById("butomUWU").disabled = true;
-	document.getElementById("butomUWU").style.cursor = "initial";
+	document.getElementById('butomUWU').disabled = true;
+	document.getElementById('butomUWU').style.cursor = 'initial';
 	a.onclick = () => {
 		p.parentNode.removeChild(p);
 		location.reload();
@@ -24,6 +24,7 @@ function send() {
 	let text = document.getElementById('input').value;
 	let name = document.getElementById('name').value;
 	let time = new Date().toLocaleTimeString();
+
 	request.setRequestHeader('Content-type', 'application/json');
 
 	const params = {
@@ -41,6 +42,9 @@ function send() {
 	};
 	if (text == undefined) {
 		return popup("You can't send an empty string");
+	}
+	if (Response.status == 429) {
+		return popup('You can only send one message per minute!');
 	} else {
 		request.send(JSON.stringify(params));
 		popup(`sent "${text}"`);
