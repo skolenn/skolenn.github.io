@@ -43,9 +43,6 @@ function send() {
 		if (request.status == 429) {
 			return popup('You can only send one message per minute!');
 		}
-		if (text == undefined) {
-			return popup("You can't send an empty string");
-		}
 		popup(`sent "${text}"`);
 	};
 
