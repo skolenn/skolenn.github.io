@@ -12,7 +12,6 @@ function popup(text) {
 		p.parentNode.removeChild(p);
 		location.reload();
 	};
-
 	p.appendChild(t);
 	p.appendChild(a);
 	document.body.appendChild(p);
@@ -24,9 +23,7 @@ function send() {
 	let text = document.getElementById('input').value;
 	let name = document.getElementById('name').value;
 	let time = new Date().toLocaleTimeString();
-
 	request.setRequestHeader('Content-type', 'application/json');
-
 	const params = {
 		avatar_url: 'https://doggo.ninja/TsY1SP.jpg',
 		username: 'Peitho messenger',
@@ -40,13 +37,17 @@ function send() {
 			},
 		],
 	};
-	request.send(JSON.stringify(params));
 	if (text == undefined) {
 		return popup("You can't send an empty string");
 	}
-	if (Response.status == 429) {
-		return popup('You can only send one message per minute!');
-	} else {
+
+	request.onreadystatechange = () => {
+		if (xhr.readyState !== 4) return;
+		if (request.status == 429) {
+			return popup('You can only send one message per minute!');
+		}
 		popup(`sent "${text}"`);
-	}
+	};
+
+	request.send(JSON.stringify(params));
 }
