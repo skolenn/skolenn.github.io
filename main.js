@@ -40,13 +40,13 @@ function send() {
 			},
 		],
 	};
+	request.send(JSON.stringify(params));
 	if (text == undefined) {
 		return popup("You can't send an empty string");
 	}
 	if (Response.status == 429) {
 		return popup('You can only send one message per minute!');
 	} else {
-		request.send(JSON.stringify(params));
 		popup(`sent "${text}"`);
 	}
 }
