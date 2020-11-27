@@ -7,7 +7,7 @@ function popup(text) {
 	a.className = 'popup-accept';
 	a.innerText = 'Ok';
 	document.getElementById("butomUWU").disabled = true;
-	document.getElementById("butomUWU").style.cursor = "pointer";
+	document.getElementById("butomUWU").style.cursor = "initial";
 	a.onclick = () => {
 		p.parentNode.removeChild(p);
 		location.reload();
