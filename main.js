@@ -44,7 +44,7 @@ function send() {
 	request.onreadystatechange = () => {
 		if (request.readyState !== 4) return;
 		if (request.status == 429) {
-			return popup('You can only send one message per minute!');
+			return popup('You can only send one message every 5 minutes!');
 		}
 		popup(`sent "${text}"`);
 	};
