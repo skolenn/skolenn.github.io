@@ -109,26 +109,9 @@
     const button = document.getElementById('butomUWU');
     button.addEventListener("click", clickFunc);
     function clickFunc() {
-        button.removeEventListener("click", clickFunc);
-        calculate();
         console.log(1)
-        button.setAttribute("style", "cursor: default;");
   }
       
-      
-    let final = 0
-    let times = document.getElementById('num').innerHTML;
-    function calculate() {
-      
-    for(let i = 0; i < times; i++) {
-        final++
-      }
-    }
-      let repeat = document.getElementById('final');
-      setInterval(() => {
-          let repeat = final;
-      }, 10)
-    
     </script>
   </body>
 </html>
