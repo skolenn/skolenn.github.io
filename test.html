@@ -105,6 +105,16 @@
         </div>
     </div>
     <script>
+      
+    const button = document.getElementById('butomUWU');
+    buton.addEventListener("click", clickFunc);
+    function clickFunc() {
+        button.removeEventListener("click", clickFunc);
+        calculate();
+        button.setAttribute("style", "cursor: default;");
+  }
+      
+      
     let final = 0
     let times = document.getElementById('num').innerHTML;
     function calculate() {
