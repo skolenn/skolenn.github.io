@@ -94,20 +94,29 @@
   </head>
   <body>
     <div id='content' class="center">
-        <h1 class="noselect">secks</h1>
+        <h1 id="final" class="noselect">0</h1>
         <div class='input noselect'>
             <a>numbooor</a>
             <br>
             <input type='input' id="num">
         </div>
-        <div class='input noselect'>
-            <a>repeat</a>
-            <br>
-            <input type='input' id="times">
-        </div>
         <button id="butomUWU" onclick="calculate()" class='button noselect'>
             Calculate
         </button>
     </div>
+    <script>
+    let final = 0
+    let times = document.getElementById('num').innerHTML;
+    function calculate() {
+      
+    for(let i = 0; i < times; i++)
+        final++
+    }
+      let repeat = document.getElementById('final');
+      while(true) {
+        repeat = final;
+      }
+    
+    </script>
   </body>
 </html>
