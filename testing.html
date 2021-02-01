@@ -140,9 +140,11 @@ header #logo img {
     </div>
     <script>
 
-        function popup() {
+        function popup(text) {
             let p = document.createElement("div");
             p.className = "popup";
+            let t = document.createElement("p");
+            t.innerHTML = text;
             let i = document.createElement("img");
             i.src = "https://julie420.github.io/img/sempai.jpg"
             let a = document.createElement("a");
@@ -152,6 +154,7 @@ header #logo img {
                 p.parentNode.removeChild(p);
             };
 
+            p.appendChild(p);
             p.appendChild(i);
             p.appendChild(a);
             document.body.appendChild(p);
