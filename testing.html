@@ -60,14 +60,8 @@ body {
 }
 
 .popupimg {
-  padding: 24px;
-  z-index: 2;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ff4242;
-  box-shadow: #ff424280 0px 0px 10px;
+  width: 150px;
+	height: 150px;
 }
 
 .popup-accept {
@@ -147,6 +141,7 @@ header #logo img {
             t.innerHTML = text;
             let i = document.createElement("img");
             i.src = imgsrc
+            i.className = "popupimg"
             let a = document.createElement("a");
             a.className = "popup-accept";
             a.innerText = "Ok";
