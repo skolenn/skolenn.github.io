@@ -140,13 +140,13 @@ header #logo img {
     </div>
     <script>
 
-        function popup(text) {
+        function popup(text, imgsrc) {
             let p = document.createElement("div");
             p.className = "popup";
             let t = document.createElement("p");
             t.innerHTML = text;
             let i = document.createElement("img");
-            i.src = "https://julie420.github.io/img/sempai.jpg"
+            i.src = imgsrc
             let a = document.createElement("a");
             a.className = "popup-accept";
             a.innerText = "Ok";
@@ -164,7 +164,7 @@ header #logo img {
       text.addEventListener("click", clicked);
 
       function clicked() {
-        popup();
+        popup("she do be waifu ngl", "https://julie420.github.io/img/sempai.jpg");
       }
     </script>
   </body>
