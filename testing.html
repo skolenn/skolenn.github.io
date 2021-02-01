@@ -140,12 +140,22 @@ header #logo img {
     </div>
     <script>
 
-      function popup() {
-  let p = document.createElement("img");
-  p.src = "https://julie420.github.io/img/sempai.jpg";
-  p.className = "popupimg";
-  document.appendChild(p);
-}
+        function popup(text) {
+            let p = document.createElement("div");
+            p.className = "popup";
+            let i = document.createElement("img");
+            t.src = "https://julie420.github.io/img/sempai.jpg"
+            let a = document.createElement("a");
+            a.className = "popup-accept";
+            a.innerText = "Ok";
+            a.onclick = () => {
+                p.parentNode.removeChild(p);
+            };
+
+            p.appendChild(t);
+            p.appendChild(a);
+            document.body.appendChild(p);
+        }
 
       const text = document.getElementById("text");
       text.addEventListener("click", clicked);
