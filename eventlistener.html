@@ -2,11 +2,17 @@
  <head>
   </head>
   <body>
+   <p id="text">0</p>
     <script>
+      let i = 0
       document.addEventListener("click", clicked)
       function clicked() {
-        alert("you clicked")
+        i++
       }
+     setInterval(() => {
+        let text = document.getElementById("text")
+        text.innerText = i
+     }, 10)
     </script>
   </body>
 </html>
